@@ -1,0 +1,114 @@
+Problem 1: Student Marks Conversion System
+
+Problem Statement:
+A student scored 87.6 marks in an exam (stored in a float). Perform the following operations:
+
+Convert the float marks into:
+double
+int
+Print all three values.
+Convert the final integer value into a character using ASCII and print it.
+
+Expected Learning:
+
+Float â†’ Double (Upcasting)
+Double â†’ Int (Downcasting)
+Int â†’ Char (ASCII conversion)
+
+Sample Output:
+
+Float value: 87.6  
+Double value: 87.6  
+Integer value: 87  
+Character value: W
+
+Answer:
+
+package day01;
+
+public class Problem01_WeeklyAssignment03 
+{
+
+	public static void main(String[] args) 
+	{
+		float Marks = 87.6F;
+		System.out.println("Marks: " + Marks);
+		
+		double MarksDouble = Marks;
+		System.out.println("Marks when converted to Double: " + MarksDouble);
+		
+		int MarksInt = (int)Marks;
+		System.out.println("Marks when coverted to Int: " + MarksInt);
+		
+		char MarksChar = (char)MarksInt;
+		System.out.println("ASCII value for marks coverted to int: " + MarksChar);
+	}
+
+}
+
+Actual Output:
+
+Marks: 87.6
+Marks when converted to Double: 87.5999984741211
+Marks when coverted to Int: 87
+ASCII value for marks coverted to int: W
+
+Problem 2: ASCII Explorer
+
+Problem Statement:
+Write a Java program that:
+
+Takes a character input from the user (e.g., 'A').
+Finds and prints its ASCII value.
+Adds 5 to the ASCII value.
+Converts the new value back to a character and prints it.
+
+Expected Learning:
+
+Char â†’ Int conversion (ASCII)
+Arithmetic operations on ASCII values
+Int â†’ Char typecasting
+
+Sample Input:
+
+Enter character: A
+
+Sample Output:
+
+ASCII value: 65  
+New ASCII value: 70  
+New character: F
+
+Answer:
+
+package day01;
+
+import java.util.Scanner;
+
+public class WeeklyAssignment03 
+{
+
+	public static void main(String[] args) 
+	{
+	Scanner sc = new Scanner(System.in);
+	System.out.println("Enter the character: ");
+	char character = sc.next().charAt(0);
+	
+	int characterInt = (int)character;
+	System.out.println("ASCII value for the given integer is: " + characterInt);
+	
+	int NewCharacterInt = characterInt + 5;
+	System.out.println("ASCII value for New inetger is: " + NewCharacterInt);
+	
+	char NewCharacter = (char)NewCharacterInt;
+	System.out.println("New character is: " + NewCharacter);
+	}
+
+}
+
+Actual Output:
+Enter the character: 
+G
+ASCII value for the given integer is: 71
+ASCII value for New inetger is: 76
+New character is: L
